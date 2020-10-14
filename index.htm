@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-us" data-ng-app="weatherApp">
+    <head>
+        <title>Weather Forecast</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta charset="UTF-8">
+
+        <!-- load bootstrap and fontawesome via CDN -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        
+        <!-- load angular via CDN -->
+        <script src="//code.angularjs.org/1.8.1/angular.min.js"></script>
+        <script src="//code.angularjs.org/1.8.1/angular-route.min.js"></script>
+        <script src="//code.angularjs.org/1.8.1/angular-resource.min.js"></script>
+        <script src="app.js"></script>
+        <script src="routes.js"></script>
+        <script src="directive.js"></script>
+        <script src="service.js"></script>
+        <script src="controllers.js"></script>
+    </head>
+    <body>
+
+        <header>
+			<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">Weather in your city</a>
+				</div>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+<!--                    <li><a href="#!forecast"></i> Forecast</a></li>-->
+				</ul>
+			</div>
+			</nav>
+		</header>
+
+        <div class="container">
+            <ng-view></ng-view>
+
+		</div>
+
+    </body>
+</html>

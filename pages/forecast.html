@@ -1,0 +1,14 @@
+<h1>Forecast for {{ city }}.</h1>
+<hr>
+    <a href="#">Back to search page</a>
+<hr>
+    Days: <a href="#!/forecast/16" ng-class="{'bg-primary': cnt === '16'}">2</a> | <a href="#!/forecast/24" ng-class="{'bg-primary': cnt === '24'}">3</a> | <a href="#!/forecast/32" ng-class="{'bg-primary': cnt === '32'}">4</a>
+<hr>
+<div ng-repeat="w in weatherResult.list" ng-if="$index % 8 === 0">
+    <div class="row">
+        <div class="col-md-12">
+            <forecast-panel date="{{w.dt}}" temp="{{w.main.temp}}" convert-to-date="convertToDate(date)" convert-to-celcius="convertToCelcius(temp)"></forecast-panel>
+        </div>
+    </div>
+
+</div>
